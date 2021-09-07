@@ -14,8 +14,8 @@ const ticketsController = require('./controllers/Tickets') // add tickets contro
 app.use('/api/tickets', ticketsController)
 /* End Controllers Here */
 
-app.set('port', 4000)
+app.set("port", process.env.PORT || 8000);
 
-app.listen(app.get('port'), () => {
-    console.log(`Listening on PORT: ${app.get('port')}`)
-})
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
