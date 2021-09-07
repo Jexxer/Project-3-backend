@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const mongoURI = 'mongodb+srv://jexxe:Cherokee01@cluster0.ja5th.mongodb.net/bugtracker'
+const mongoURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ja5th.mongodb.net/bugtracker`
 
 mongoose
     .connect(mongoURI, {
