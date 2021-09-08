@@ -6,7 +6,8 @@ const TicketSchema = new mongoose.Schema({
     status: {type: String, required: true},
     creatorId: String,
     isOpen: Boolean,
-    message: String
+    message: String,
+    assignedTo: String,
 });
 
 const Ticket = mongoose.model("Ticket", TicketSchema);
