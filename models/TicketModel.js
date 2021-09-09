@@ -8,7 +8,7 @@ const TicketSchema = new mongoose.Schema({
     creatorId: String,
     isOpen: Boolean,
     message: String,
-    assignedTo: String,
+    assignedTo: {type: String, default: ''},
     devNotes: String
 });
 
