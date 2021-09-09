@@ -6,8 +6,7 @@ const UserSchema = new mongoose.Schema({
   lastLogin: { type: Date, default: Date.now },
   email: String,
   profilePic: String,
-  password: String,
-  assignedTickets: [String] // ticket ID
+  password: String
 });
 
 const User = mongoose.model("User", UserSchema);

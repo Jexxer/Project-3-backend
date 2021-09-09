@@ -8,6 +8,7 @@ const TicketSchema = new mongoose.Schema({
     isOpen: Boolean,
     message: String,
     assignedTo: String,
+    devNotes: String
 });
 
 const Ticket = mongoose.model("Ticket", TicketSchema);
