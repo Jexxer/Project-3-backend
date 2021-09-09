@@ -10,6 +10,12 @@ router.get('/', (req, res, next) => {
         .catch(next)
 })
 
+router.get('/assigned/:id', (req, res, next) => {
+    User.find({assignedTo: req.params.id})
+    .then(users => res.json(users))
+    .catch(next)
+})
+
 router.get('/:id', (req, res, next) => {
     Ticket.findById(req.params.id)
         .then((ticket) => res.json(ticket))
