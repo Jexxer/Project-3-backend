@@ -11,7 +11,7 @@ router.get('/', (req, res, next) => {
 })
 
 router.get('/assigned/:id', (req, res, next) => {
-    User.find({'assignedTo': `${req.params.id}`})
+    User.find({'assignedTo':req.params.id})
     .then(users => res.json(users))
     .catch(next)
 })
